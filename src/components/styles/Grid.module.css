@@ -1,0 +1,138 @@
+
+:root{
+    --cell-size :100px; 
+    --mark-size : calc( var(--cell-size) * 0.9)   
+    /* x and o size to be 90% oc the cell size */
+}
+
+body{
+    margin: 0;
+    /* background-color:white ;
+     */
+     background-image: radial-gradient(circle, #ffffff, #e9efff, #c4e3ff, #93d9f8, #52d0e6);
+     /* background-image: linear-gradient( #18195c, #143378, #084d93, #0068ac, #0084c3, #2497cd, #40aad6, #5bbcde, #7cc9dd, #9cd4de, #badfe2, #d8eae9); */
+     /* background-image: linear-gradient(to bottom, #051937, #5f2d61, #b94062, #f0793f, #ebcb12); */
+    }
+
+.board{
+    width: fit-content;
+    height: 30vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    margin: 5% auto;
+    /* background-color: blue; */
+    
+    /* background-color: rgb(146, 96, 34); */
+
+    /* To align x and o at the center of the grid */
+}
+
+.cell{
+  /* width: 100px;
+  height: 100px; */
+  width: var(--cell-size);
+  height: var(--cell-size);
+
+  /* background-color: black; */
+  border: 3px solid #012443;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5%;
+  /* color: rgb(163, 240, 163); */
+  /* cursor: pointer; */
+  /* color:rgb(245, 236, 236,0.7); */
+
+}
+
+
+  .cell:first-child,
+  .cell:nth-child(2),
+  .cell:nth-child(3){
+      border-top: none;
+  } 
+  
+  .cell:nth-child(3n + 1){
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3){
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7){
+    border-bottom: none;
+}
+
+.x_o{
+  background-color:#053742;
+  color: #d4e7f1 ;
+  padding: 20px;
+  margin:0px 10px;
+  border: none;
+  font-size: 20px;
+  border-radius: 20%;
+}
+
+.play,.move,.easy,.hard,.cancel{
+  background-color:#053742;
+  color: white ;
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  font-size: 20px;
+  border-radius: 3%;
+  box-shadow: 5px 5px 10px #9b9fa0;
+  
+}
+
+ .play:hover,.play:active, .play:focus,.easy:hover,.hard:hover,.cancel:hover,.easy:focus,.hard:focus,.easy:active,.hard:active {
+  background-color:#19869e ;
+  color: white;
+  box-shadow: 2px 1px 2px gray;
+}
+.x_o:hover, .x_o:focus{
+  background-color:rgb(231, 176, 75);
+  color: white;
+  box-shadow: 2px 1px 2px gray;
+}
+
+.move,.cancel{
+  background-color:rgb(63, 7, 7);
+  color: white ;
+}
+
+.easy{
+  background-color: rgb(6, 100, 6);
+  color: white ;
+}
+.hard{
+  background-color: rgb(194, 191, 191);
+  color: black ;
+}
+
+.main{
+  /* display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
+  /* background-color: blanchedalmond; */
+  margin: 5% auto;
+  position: relative;
+}
+
+.move:hover, .move:focus{
+  background-color:rgb(231, 176, 75);
+  color: black;
+  box-shadow: 2px 1px 2px gray;
+}
+
+
+
